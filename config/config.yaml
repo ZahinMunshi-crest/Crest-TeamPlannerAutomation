@@ -1,0 +1,39 @@
+base_url:
+  ui: "https://10.50.13.151"
+  api: "http://10.50.13.151"
+
+users:
+  - role: "TP Admin"
+    username: "${TP_ADMIN_USERNAME}"
+    password: "${TP_ADMIN_PASSWORD}"
+
+  - role: "TP Manager"
+    username: "${TP_MANAGER_USERNAME}"
+    password: "${TP_MANAGER_PASSWORD}"
+
+api_details:
+  port: 8000
+  username: "${API_USERNAME}"
+  encrypt_password: "${API_ENCRYPT_PASSWORD}"
+  grant_type: "password"
+  referer: "http://10.50.13.151:8000/docs"
+  consumer_key: "${CONSUMER_KEY}"
+  consumer_secret: "${CONSUMER_SECRET}"
+  content_type: "application/x-www-form-urlencoded"
+  accept: "application/json"
+  ignore_https_errors: true
+
+browser:
+  name: "chrome"
+  headless: false
+
+endpoints:
+  ui:
+    login: "/login"
+    timesheet: "/timesheet/my-timesheet"
+    project: "/projects"
+    task: "/tasks"
+
+  api:
+    post_login: "/api/login"
+    get_login_user: "/api/get-login-user"
